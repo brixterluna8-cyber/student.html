@@ -1,0 +1,34 @@
+<input id="nameinput" placeholder="Enter your name">
+<p id="preview"></p>
+
+<select id="programSelect">
+    <option value="">Select program</option>
+    <option value="BSIS">BSIS</option>
+    <option value="BSIT">BSIT</option>
+</select>
+
+<p id="message"></p>
+
+    <link rel="stylesheet" href="act2.css" />
+ 
+<script>
+    const nameInput = document.querySelector('#nameinput');
+    const preview = document.querySelector('#preview');
+    const programSelect = document.querySelector('#programSelect');
+    const message = document.querySelector('#message');
+
+    nameInput.addEventListener('input', function() {
+        preview.textContent = nameInput.value;
+    });
+    programSelect.addEventListener('change', function() {
+        message.textContent = "Selected program: " + programSelect.value;
+    });
+    nameInput.addEventListener("blur", function() {
+        nameInput.style.backgroundColor = "light yellow";
+    });
+    nameInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            message.textContent = "You pressed Enter!";
+        }
+    });
+</script>
