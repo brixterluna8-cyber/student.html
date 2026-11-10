@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>What Can JavaScript Do?></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=""UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>JavaScript Basic Examples</title>
+</head>
+
+
+
+<body>
+    <h1>STUDENT INFORMATION</h1>
+
+    <h1> id="courseOutput"></h1>
+    <h1> id="messageOutput"></h1>
+    <p> id="eligibilityOutput"</p>
+
+
+    <script>
+        // Course and year level
+        const course = "BSIS";
+        let yearLevel = 2;
+
+        console.log(course);
+        console.log(yearLevel);
+
+        document.getElementById("courseOutput").innerHTML =
+          'Course: ${course}<br>Year Level: ${yearLevel}';
+        
+        // Student message
+        const firstName = "Ana";
+        const program = "BSIS";
+
+        const message = '${firstName} studies ${program}.';
+
+        console.log(message);
+        document.getElementById("messageOutput").innerHTML = message;
+
+        // Age eligibility
+        const age = 19;
+
+        if(age >= 18) {
+            console.log("Eligible");
+            document.getElementById("eligibilityOutput").innerHTML =
+              'Age: ${age}<br>Status: Eligible';
+        } else {
+            console.log("Not eligible");
+            document.getElementById("eligibilityOutput").innerHTML =
+              'Age: ${age}<br>Status: Not Eligible';
+        }
+    </script>
+</body>
+</html>
+
+
